@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#bla"  />
+
+    <title>TecnoStore</title>
+    
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="container-fluid bg-dark position-sticky top-0">
+      <ul
+        class="nav nav-pills mb-3 py-3 container"
+        id="pills-tab"
+        role="tablist"
+      >
+      <!-- Mas adelante le dare formato al home y al resto del sitio -->
+        <!-- <li class="nav-item text-primary" role="presentation">
+          <a
+            class="nav-link "
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+            >Home</a
+          >
+        </li> -->
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+            >Productos</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-contact-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contact"
+            type="button"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+            >Carrito</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+    Producto Añadido al carrito!
+    </div>
+    <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+      Producto removido!
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade "
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+      >
+        1
+      </div>
+      <div
+        class="tab-pane fade show active container"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+      >
+        <h2 class="h4 m-4 text-primary">Productos</h2>
+
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 25rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Procesador AMD Ryzen 9 5950X</h5>
+              <img src="./img/procesador-amd-ryzen-9-5950x.jpg" style="height: 14rem; width: 19rem;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">El Ryzen 9 5950X es el mejor de la serie, con 16 núcleos y 32 hilos, nos ofrece hasta 4.9GHz. </p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 120000</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 25rem;width: 19rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Procesador Intel Core i9 5.3GHz</h5>
+              <img src="./img/procesador-intel-core-i9.jpg" style="height: 14rem; width: 19rem;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Este monstruo esconde 18 núcleos y 36 hilos, que funcionan a una vel base de 2,6 GHz a 4,2 GHz en modo turbo.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 80000</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 25rem;width: 19rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Cooler CPU ASUS ROG STRIX</h5>
+              <img src="./img/cooler-cpu-asusrogstrix-white.jpg" style="height: 14rem; width: 19rem;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">ASUS ROG Strix LC 240 RGB White Edition Enfriador de CPU líquido todo en uno con Aura Sync RGB.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 50000</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 25rem;width: 19rem;">
+              <h5 class="card-title pt-2 text-center text-primary">T-Force DDR4 16GB 3200MHz</h5>
+              <img src="./img/memoria-ram-tforce-xtreem-cl14.jpg" style="height: 14rem; width: 19rem;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Uno de los diseños más bonitos en memorias DDR4 con el máximo rendimiento para vuestras CPUs.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 20000</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 25rem;width: 19rem;">
+              <h5 class="card-title pt-2 text-center text-primary">T-Force DDR4 16GB White</h5>
+              <img src="./img/memoria-ram-tforce-xtreem-cl14-white.jpg" style="height: 14rem; width: 19rem;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Máximo rendimiento para vuestras CPUs y en blanco para exigentes.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 20000</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 25rem;width: 19rem;">
+              <h5 class="card-title pt-2 text-center text-primary">RTX 3090 24GB ROG STRIX</h5>
+              <img src="./img/rtx3090-24gb-strix-gaming-white.jpg" style="height: 14rem; width: 19rem;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Multiprocesadores NVIDIA Ampere Streaming: Los bloques de construcción de la GPU más rápida.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 605000</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 25rem;width: 19rem;">
+              <h5 class="card-title pt-2 text-center text-primary">RX 5700 XT 8GB Asrock</h5>
+              <img src="./img/rx5700xt-8gb-asrock.jpg" style="height: 14rem; width: 19rem;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Con tecnologías de juegos avanzada, RX5700XT te llevan a la acción.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 400000</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 25rem;width: 19rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Helios Aluminum Black</h5>
+              <img src="./img/gabinete-rogstrix-helios-aluminum-black-rgb.jpg" style="height: 14rem; width: 19rem;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Gabinete ASUS ROG STRIX Helios Aluminum Black RGB.</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ 65000</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div
+        class="tab-pane fade carrito"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+      <br>
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr class="text-primary">
+            <th scope="col">#</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          
+        
+          
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal text-primary">Total: 0</h3>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button class="btn btn-success">COMPRAR</button>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+<footer class="mt-5 bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+  <!-- Section: Social media -->
+  <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-github"></i
+      ></a>
+  </section>
+  <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  © 2021 Copyright:
+  <a href="index.html" class="text-white">TecnoStore</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/scripts.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  </body>
+</html>
