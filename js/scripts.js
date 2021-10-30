@@ -2,11 +2,12 @@ const Clickbutton = document.querySelectorAll('.button')
 const tbody = document.querySelector('.tbody')
 let carrito = []
 
+// Add events (add to carito) to every button
 Clickbutton.forEach(btn => {
   btn.addEventListener('click', addToCarritoItem)
 })
 
-
+// When the user hit in the button save this information before send it to the carrito
 function addToCarritoItem(e){
   const button = e.target
   const item = button.closest('.card')
@@ -24,16 +25,18 @@ function addToCarritoItem(e){
   addItemCarrito(newItem)
 }
 
-
+// Send to carrito the information received before
 function addItemCarrito(newItem){
 
   const alert = document.querySelector('.alert')
 
+  // Show an alert
   setTimeout( function(){
     alert.classList.add('hide')
   }, 2000)
     alert.classList.remove('hide')
 
+  // If we already had the item in our cart, just sum the items and don't add one new
   const InputElemnto = tbody.getElementsByClassName('input__elemento')
   for(let i =0; i < carrito.length ; i++){
     if(carrito[i].title.trim() === newItem.title.trim()){
@@ -50,7 +53,7 @@ function addItemCarrito(newItem){
   renderCarrito()
 } 
 
-
+// Show in carrito the information in a table that I added with JS
 function renderCarrito(){
   tbody.innerHTML = ''
   carrito.map(item => {
@@ -73,12 +76,14 @@ function renderCarrito(){
     tr.innerHTML = Content;
     tbody.append(tr)
 
+    // Add events to buttons in our cart (delete and add or less items)
     tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
     tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
   })
   CarritoTotal()
 }
 
+// Sum the total of the items in the cart
 function CarritoTotal(){
   let Total = 0;
   const itemCartTotal = document.querySelector('.itemCartTotal')
@@ -91,6 +96,7 @@ function CarritoTotal(){
   addLocalStorage()
 }
 
+// Delete item selected from the cart
 function removeItemCarrito(e){
   const buttonDelete = e.target
   const tr = buttonDelete.closest(".ItemCarrito")
@@ -104,6 +110,7 @@ function removeItemCarrito(e){
 
   const alert = document.querySelector('.remove')
 
+  // Show an alert
   setTimeout( function(){
     alert.classList.add('remove')
   }, 2000)
@@ -113,6 +120,7 @@ function removeItemCarrito(e){
   CarritoTotal()
 }
 
+// Change the value of the quantity in the cart (sum or less)
 function sumaCantidad(e){
   const sumaInput  = e.target
   const tr = sumaInput.closest(".ItemCarrito")
@@ -126,10 +134,12 @@ function sumaCantidad(e){
   })
 }
 
+// Save Carrito in a JSON
 function addLocalStorage(){
   localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
+// If the page is reloaded, search if exist a cart and if exist, save it in the storage and show it in carrito
 window.onload = function(){
   const storage = JSON.parse(localStorage.getItem('carrito'));
   if(storage){
