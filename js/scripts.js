@@ -139,7 +139,7 @@ function addLocalStorage(){
   localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
-// If the page is reloaded, search if exist a cart and if exist, save it in the storage and show it in carrito
+// If the page is reloaded, search if exist a cart and if exist, parse it in the storage and show it in carrito
 window.onload = function(){
   const storage = JSON.parse(localStorage.getItem('carrito'));
   if(storage){
